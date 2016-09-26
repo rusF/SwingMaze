@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by Manifest on 9/26/2016.
+ * Created by Russell Fiilmore on 9/26/2016.
  */
 public class MazeTest {
 

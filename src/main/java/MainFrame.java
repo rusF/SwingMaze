@@ -4,7 +4,7 @@ import maze.Room;
 import javax.swing.*;
 
 /**
- * Created by Manifest on 9/23/2016.
+ * Created by Russell Fillmore on 9/23/2016.
  */
 public class MainFrame extends JFrame{
     JPanel mainPanel = new JPanel();

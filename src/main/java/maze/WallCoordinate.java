@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Manifest on 9/23/2016.
+ * Created by Russell Fillmore on 9/23/2016.
  */
 public class WallCoordinate {
     public static enum WallAxis {NORTH_SOUTH,EAST_WEST};
