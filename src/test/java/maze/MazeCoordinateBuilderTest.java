@@ -44,8 +44,7 @@ public class MazeCoordinateBuilderTest {
 
     @Test
     public void testGenerateWallCoordinatesMakesAllValidCoordinates() throws Exception {
-        List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         for(WallCoordinate coordinate : wallCoordinates){
             assertTrue("Each wall coordinate must be valid", coordinate.isValidWall());
         }
@@ -54,8 +53,7 @@ public class MazeCoordinateBuilderTest {
     @Test
     public void testGenerateWallCoordinatesMakesANorthWallForEachRoom(){
         fillRooms();
-        List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         for(int[][] roomx : rooms) {
             for (int[] roomxy : roomx) {
                 RoomCoordinate mainRoom = new RoomCoordinate(roomxy[1], roomxy[0]);
@@ -69,8 +67,7 @@ public class MazeCoordinateBuilderTest {
     @Test
     public void testGenerateWallCoordinatesMakesAWestWallForEachRoom(){
         fillRooms();
-        List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         for(int[][] roomx : rooms) {
             for (int[] roomxy : roomx) {
                 RoomCoordinate mainRoom = new RoomCoordinate(roomxy[1], roomxy[0]);
@@ -84,8 +81,7 @@ public class MazeCoordinateBuilderTest {
     @Test
     public void testGenerateWallCoordinatesMakesASouthWallForEachRoom(){
         fillRooms();
-        List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         for(int[][] roomx : rooms) {
             for (int[] roomxy : roomx) {
                 RoomCoordinate mainRoom = new RoomCoordinate(roomxy[1], roomxy[0]);
@@ -99,8 +95,7 @@ public class MazeCoordinateBuilderTest {
     @Test
     public void testGenerateWallCoordinatesMakesAEastWallForEachRoom(){
         fillRooms();
-        List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         for(int[][] roomx : rooms) {
             for (int[] roomxy : roomx) {
                 RoomCoordinate mainRoom = new RoomCoordinate(roomxy[1], roomxy[0]);
@@ -113,8 +108,7 @@ public class MazeCoordinateBuilderTest {
 
     @Test
     public void testGenerateWallCoordinatesMakesCorrectNumberOfWalls(){
-        List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         assertEquals("If height is "+4+" and width is "+3+" then the total number of rooms must be "+31, 31, wallCoordinates.size());
     }
 
@@ -127,7 +121,7 @@ public class MazeCoordinateBuilderTest {
     @Test
     public void testGenerateWallCoordinatesDoesNotChangeNumberOfRoomCoordinates(){
         List<RoomCoordinate> roomCoordinates= MazeCoordinateBuilder.generateRoomCoordinates(4,3);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates,4,3);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(4,3);
         assertEquals("After wall coordinates generated the number of room cooridinates for height 4 and width 3 must be 12", 12, roomCoordinates.size());
     }
 

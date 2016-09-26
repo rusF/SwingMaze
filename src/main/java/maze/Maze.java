@@ -52,9 +52,9 @@ public class Maze {
 
     public Maze fill(){
         List<RoomCoordinate> roomCoordinates = MazeCoordinateBuilder.generateRoomCoordinates(height, width);
-        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(roomCoordinates, height, width);
+        List<WallCoordinate> wallCoordinates = MazeCoordinateBuilder.generateWallCoordinates(height, width);
         makeWalls(wallCoordinates);
-        //makeRooms(roomCoordinates);
+        makeRooms(roomCoordinates);
         return this;
     }
 
